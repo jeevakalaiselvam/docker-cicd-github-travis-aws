@@ -32,7 +32,7 @@
 
     //First create the docker-compose.yml file and add configuration details
 
-     //Bring up the containers
+    //Bring up the containers
     docker-compose up
 
     //Build the containers and  bring them up to reflect recent changes
