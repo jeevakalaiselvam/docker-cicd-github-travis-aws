@@ -1,11 +1,19 @@
+#Development build
+
+#Start the base image from Node Alpine
 FROM node:alpine
 
+#Change working directory to /app
 WORKDIR '/app'
 
+#Copy package.json file into current working directory
 COPY package.json .
 
+#Install all NPM dependencies
 RUN npm install
 
+#Copy all files from host working directory to container working directory
 COPY . .
 
+#Initiate the development server by running the script npm run start
 CMD ["npm","run","start"]

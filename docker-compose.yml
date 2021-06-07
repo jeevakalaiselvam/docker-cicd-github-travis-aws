@@ -1,19 +1,19 @@
 version: '3'
-services:
-    web:
-        build:
-            context: .
-            dockerfile: Dockerfile.dev
+services: #List of all services
+    web: #Defines the development start build service
+        build: #Define the build config for the service
+            context: . #Use current working directory as context
+            dockerfile: Dockerfile.dev #Use the file Dockerfile.dev to build the image
         ports:
-            - '3000:3000'
+            - '3000:3000' #Map the port 3000 form host to 3000 in container
         volumes:
-            - /app/node_modules
-            - .:/app
-    tests:
-        build:
-            context: .
-            dockerfile: Dockerfile.dev
+            - /app/node_modules #Create references to the node_modules folder
+            - .:/app #Create volume references from current working directory in host to /app in container
+    tests: #Defines the test start build service
+        build: #Define the build config for the service
+            context: . #Use current working directory as context
+            dockerfile: Dockerfile.dev #Use the file Dockerfile.dev to build the image
         volumes:
-            - /app/node_modules
-            - .:/app
-        command: ['npm', 'run', 'test']
+            - /app/node_modules #Create references to the node_modules folder
+            - .:/app #Create volume references from current working directory in host to /app in container
+        command: ['npm', 'run', 'test'] #Overide the default command specified in Dockerfile.dev to use npm run test

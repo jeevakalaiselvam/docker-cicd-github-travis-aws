@@ -48,9 +48,14 @@
 
     #Listening to Test Suite on already built container
     docker-compose up
-    docker ps #Grab the container image from there
+    docker ps #Grab the container image from here
     docker run -it CONTAINER_IMAGE npm run test
 
     #Using services in docker-compose.yml to configure and listen for Test Suite
     docker-compose up --build
     docker container ls //To check the new containers running
+
+### Creating Production Version for the React Application
+
+    #Application needs PROD SERVER to serve production bundled application build
+    #Create Dockerfile for production
