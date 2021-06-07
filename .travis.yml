@@ -16,7 +16,7 @@ script:
   - docker run jeevakalaiselvam/docker-cicd-react-github-travis-aws npm run test
 
 #Travis CI config for AWS
-#NOTE: The AWS_ACCESS_KEY and AWS_SECRET_KEY are configured in secure env settings in Travis CI
+#NOTE: The AWS_ACCESS_KEY and AWS_SECRET_KEY are configured in secure env settings in Travis CI.
 deploy:
   deploy:
   provider: elasticbeanstalk
