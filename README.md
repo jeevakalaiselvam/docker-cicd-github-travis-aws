@@ -61,3 +61,9 @@
     #Create Dockerfile for production with multi step build process
     #Copy the build directory from running npm run build into the static content serve directory of nginx server
     #The path to serve static content in nginx is /usr/share/nginx/html
+
+    #Run the multi stage build
+    docker build .
+
+    #Run the container exposing the ports
+    docker run -p 8080:80 CONTAINER_IMAGE_ID
