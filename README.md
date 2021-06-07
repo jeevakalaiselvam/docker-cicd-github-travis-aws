@@ -15,8 +15,10 @@
 
 ### Build the development image in docker
 
-    docker build -f Dockerfile.dev .
     //Delete the node_modules folder if you dont need COPY to move them into container every single time
+
+    //Build the docker image using the config details in Dockerfile.dev
+    docker build -f Dockerfile.dev .
 
 ### Run the container
 
