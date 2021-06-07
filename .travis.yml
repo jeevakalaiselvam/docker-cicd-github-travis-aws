@@ -13,7 +13,7 @@ before_install:
 
 #Tell travel how to run the test for react application
 script:
-  - docker run -e CI=true jeevakalaiselvam/docker-cicd-react-github-travis-aws npm run test
+  - docker run jeevakalaiselvam/docker-cicd-react-github-travis-aws npm run test
 
 #Travis CI config for AWS
 #NOTE: The AWS_ACCESS_KEY and AWS_SECRET_KEY are configured in secure env settings in Travis CI
