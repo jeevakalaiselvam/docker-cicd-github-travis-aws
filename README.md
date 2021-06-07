@@ -53,3 +53,4 @@
 
     #Using services in docker-compose.yml to configure and listen for Test Suite
     docker-compose up --build
+    docker container ls //To check the new containers running
