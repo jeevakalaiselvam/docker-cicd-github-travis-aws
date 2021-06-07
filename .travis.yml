@@ -9,7 +9,7 @@ services:
 
 #Tell Travis what to run before build
 before_install:
-  - docker build -t jeevakalaiselvam/docker-cicd-react-github-travis-aws -f Dockerfile.dev .
+  - docker build -t jeevakalaiselvam/docker-cicd-react-github-travis-aws -f Dockerfile .
 
 #Tell travel how to run the test for react application
 script:
