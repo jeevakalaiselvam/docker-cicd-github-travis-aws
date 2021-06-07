@@ -11,7 +11,7 @@ services:
 before_install:
   - docker build -t jeevakalaiselvam/docker-cicd-react-github-travis-aws -f Dockerfile.dev .
 
-#Tell travel how to run the test for react application
+#Tell travel how to run the test for react application and exit on test results to continue
 script:
   - docker run -e CI=true jeevakalaiselvam/docker-cicd-react-github-travis-aws npm run test
 

@@ -12,7 +12,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    REACT APPLICATION
+                    SIMPLD REACT APPLICATION
                 </a>
             </header>
         </div>
