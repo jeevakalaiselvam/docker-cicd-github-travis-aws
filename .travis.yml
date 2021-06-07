@@ -17,14 +17,14 @@ script:
 
 #Travis CI config for AWS
 #NOTE: The AWS_ACCESS_KEY and AWS_SECRET_KEY are configured in secure env settings in Travis CI
-# deploy:
-#   deploy:
-#   provider: elasticbeanstalk
-#   access_key_id: "$AWS_ACCESS_KEY"
-#   secret_access_key: "$AWS_SECRET_KEY"
-#   region: "ap-south-1"
-#   app: "docker-cicd-react-github-travis-aws"
-#   env: "Dockercicdreactgithubtravisaws-env"
-#   bucket_name: "elasticbeanstalk-ap-south-1-852844134094"
-#   bucket_path: "docker-cicd-react-github-travis-aws"
+deploy:
+  deploy:
+  provider: elasticbeanstalk
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+  region: "ap-south-1"
+  app: "docker-cicd-react-github-travis-aws"
+  env: "Dockercicdreactgithubtravisaws-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-852844134094"
+  bucket_path: "docker-cicd-react-github-travis-aws"
 
