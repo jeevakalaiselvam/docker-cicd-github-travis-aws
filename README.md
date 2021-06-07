@@ -99,4 +99,9 @@
         * Setup App Name
         * Setup Environment Name
         * Setup S3 Bucket Name
+        * Setup Bucket Path
         * Setup Key ID and Access Key
+        * Create user and key in IAM
+        * Setup Keys using ENV Secrets in Travis CI
+        * They are named as AWS_ACCESS_KEY and AWS_SECRET_KEY in this project
+        *
