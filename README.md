@@ -58,4 +58,6 @@
 ### Creating Production Version for the React Application
 
     #Application needs PROD SERVER to serve production bundled application build
-    #Create Dockerfile for production
+    #Create Dockerfile for production with multi step build process
+    #Copy the build directory from running npm run build into the static content serve directory of nginx server
+    #The path to serve static content in nginx is /usr/share/nginx/html
