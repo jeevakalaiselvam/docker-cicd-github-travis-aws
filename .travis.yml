@@ -15,3 +15,16 @@ before_install:
 script:
   - docker run -e CI=true jeevakalaiselvam/docker-cicd-react-github-travis-aws npm run test
 
+#Travis CI config for AWS
+deploy:
+  deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "Encrypted <access-key-id>="
+  secret_access_key:
+    secure: "Encypted <secret-access-key>="
+  region: "ap-south-1"
+  app: "docker-cicd-react-github-travis-aws"
+  env: "Dockercicdreactgithubtravisaws-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-852844134094"
+

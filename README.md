@@ -80,3 +80,23 @@
     2. Build the Docker image using Dockerfile.dev
     3. Tell Travis to run the test suite
     4. If tests are green, Tell travis how to deploy the code to AWS
+
+### Push Code into Github
+
+    1. Commit and Push the new changes to Github
+    2. Travis will discover the new commit and initiate a new build
+    3. If all configuration are correct, Travis build will exit with exit code 0
+
+### Integration with AWS
+
+    1. Create an account with AWS
+    2. Go into the dashboard for Elastic Beanstalk
+    3. Create new Application
+    4. For Single Docker environment, Use platform as Docker and Amazon 64 bit Linux
+    5. Setup Travis CI configuration for linking to AWS
+        * Setup Provider Name
+        * Setup Region Name
+        * Setup App Name
+        * Setup Environment Name
+        * Setup S3 Bucket Name
+        * Setup Key ID and Access Key
