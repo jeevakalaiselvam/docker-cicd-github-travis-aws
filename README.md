@@ -67,3 +67,14 @@
 
     #Run the container exposing the ports
     docker run -p 8080:80 CONTAINER_IMAGE_ID
+
+### Setup integration with Travis CI
+
+    1. Add the Github repository to Travi CI and give access
+    2. Create .travis.yml file to help Travis make decisions
+
+    Steps to be configures in TRAVIS
+    1. Tell Travis Docker is needed
+    2. Build the Docker image using Dockerfile.dev
+    3. Tell Travis to run the test suite
+    4. If tests are green, Tell travis how to deploy the code to AWS
