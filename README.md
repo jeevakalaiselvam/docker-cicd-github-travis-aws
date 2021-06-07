@@ -104,4 +104,4 @@
         * Create user and key in IAM
         * Setup Keys using ENV Secrets in Travis CI
         * They are named as AWS_ACCESS_KEY and AWS_SECRET_KEY in this project
-        *
+    6. Make sure to expose the PORT in the DockerConfig.yml file
