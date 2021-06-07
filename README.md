@@ -30,4 +30,26 @@
 
 ### Simplify build process with Docker Compose
 
-    //First create the docker-compose.yml file
+    //First create the docker-compose.yml file and add configuration details
+
+     //Bring up the containers
+    docker-compose up
+
+    //Build the containers and  bring them up to reflect recent changes
+    docker-compose up --build
+
+### Run the test suite inside the container
+
+    #Build the container
+    docker build -f Dockerfile.dev .
+
+    #Use the container image to get a interactive shell
+    docker run -it CONTAINER_IMAGE npm run test
+
+    #Listening to Test Suite on already built container
+    docker-compose up
+    docker ps #Grab the container image from there
+    docker run -it CONTAINER_IMAGE npm run test
+
+    #Using services in docker-compose.yml to configure and listen for Test Suite
+    docker-compose up --build
